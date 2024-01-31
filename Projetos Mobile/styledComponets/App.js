@@ -1,35 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Image, Text, View } from 'react-native';
 import { Container } from './src/components/Container/Container';
+import { Title } from './src/components/Title/Title';
+import { Button } from './src/components/Button/Button';
+
 export default function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   const increment = () => {
-    setCount(count + 1)
-  }
+    setCount(count + 1);
+  };
 
   const decrement = () => {
-    setCount(count - 1)
-  }
+    setCount(count - 1);
+  };
 
-  //hook user efect
+  // hook useEffect
   useEffect(() => {
-    console.warn(`contador atualizado: ${count}`)
-  }, [count])
+    console.warn(`contador atualizado: ${count}`);
+  }, [count]);
 
   return (
     <Container>
+    
 
-      <Text>Contador: {count} </Text>
+      <Title>Contador: {count}</Title>
 
-      <TouchableOpacity style={styles.buttonIncrementar} onPress={increment}>
+      <Button onPress={increment}>
         <Text>Incrementar</Text>
-      </TouchableOpacity>
+      </Button>
 
-      <TouchableOpacity style={styles.decrementar} onPress={decrement}>
+      <Button onPress={decrement}>
         <Text>Decrementar</Text>
-      </TouchableOpacity>
+      </Button>
 
       <StatusBar style="auto" />
     </Container>
@@ -37,21 +41,9 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
- 
-  buttonIncrementar: {
-    backgroundColor: 'rgb(59, 89, 145)',
-    padding: 10,
-    borderRadius: 5,
-    width: '30%',
-    alignItems: 'center',
+  image: {
+    width: '100%', // Make the image take the full width
+    height: 100, // Adjust the height as needed
+    resizeMode: 'cover', // Or use 'contain' based on your requirement
   },
-  decrementar: {
-    backgroundColor: '#8ab3b4',
-    padding: 10,
-    borderRadius: 5,
-    width: '30%',
-    alignItems: 'center',
-    marginTop: 20,
-  },
-
 });
