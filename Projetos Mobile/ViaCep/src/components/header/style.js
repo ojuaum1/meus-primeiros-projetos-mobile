@@ -1,23 +1,26 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
 
-// hEADER CONTAINER (é uma view a caixinha que guarda todo mundo)
- //HEADER CONTERNT (SAFE AREA VIEW - area segura da caixa )
- // TEXT HEADER ( texto que vai no header)
- 
- export const HeaderContainer = styled.View`
- background-color: #FECC2B;
- border-radius: 0px 0px 15px 15px;
- box-shadow: 0px 0px 10px #00000030;
- height: 20%;
- `
+export const HeaderContainer = styled.View`
+  width: 100%;
+  height: 20%;
+  background-color: #FECC2B;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0px 4px 15px black;
+  shadow-color: black;
+  shadow-offset:  0px 4px;
+  shadow-opacity: 0.75;  
+  elevation: 2;
 
- export const HeaderContent = styled.SafeAreaView`
- 
- `
- export const TextHeader = styled.Text`
- font-size: 24px;
-color: #333E33;
-font-family:'Roboto_500Medium;';
-line-height: 100px;
-text-align: center;
- `
+
+  justify-content: center;
+  align-items: center;
+`
+export const TextHeader = styled.Text`
+  font-size: 24px;
+  font-family: "Roboto_500Medium" ; 
+  color:#333E33;
+`
+
+export const HeaderContent = styled.SafeAreaView`
+
+`
