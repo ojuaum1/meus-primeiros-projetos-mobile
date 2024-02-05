@@ -1,6 +1,7 @@
 import { InputText } from "./style";
 
 export const Input = ({
+  onBlur,
   placeholder,
   editable,
   fieldValue,
@@ -12,9 +13,10 @@ export const Input = ({
 }) => {
   return(
     <InputText
+      onBlur={onBlur}
       placeholder={placeholder}
       editable={editable}
-      fieldValue={fieldValue}
+      value={fieldValue}
       onChangeText={onChangeText}
       keyType={keyType}
       maxLenght={maxLenght}

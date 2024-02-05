@@ -3,6 +3,7 @@ import { Label } from "../Label";
 import { FieldContent } from "./style";
 
 export const BoxInput = ({
+  onBlur = null,
   textLabel,
   placeholder,
   fieldWidth = 100,
@@ -25,6 +26,7 @@ export const BoxInput = ({
         maxLength={maxLength}
         minLength={minLength}
         fieldValue={fieldValue}
+        onBlur={onBlur}
         onChangeText={onChangeText}
         keyboardType={keyboardType}
         
