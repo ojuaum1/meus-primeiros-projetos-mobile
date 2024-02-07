@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 export const HeaderContainer = styled.View`
   width: 100%;
   height: 20%;
-  background-color: #FECC2B;
+  background-color: #b7bf99;
   border-radius: 0 0 15px 15px;
   box-shadow: 0px 4px 15px black;
   shadow-color: black;
@@ -18,7 +18,7 @@ export const HeaderContainer = styled.View`
 export const TextHeader = styled.Text`
   font-size: 24px;
   font-family: "Roboto_500Medium" ; 
-  color:#333E33;
+  color:#ffffff;
 `
 
 export const HeaderContent = styled.SafeAreaView`
