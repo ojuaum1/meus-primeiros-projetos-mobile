@@ -15,3 +15,12 @@ export const LinkBold = styled(LinkMedium)`
 color: #4D659D;
 font-size: 16px;
 `
+
+export const Linkviar = styled.Text`
+align-items: center;
+margin-top: 15px;
+justify-content: center;
+text-decoration: underline;
+color:#344F8F;
+font-size: 16px;
+`

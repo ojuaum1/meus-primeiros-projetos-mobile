@@ -6,24 +6,34 @@ import { Input } from "../../components/input/Style"
 import { Logo } from "../../components/logo/Style"
 import { Title } from "../../components/title/Style"
 
-export const Password = ({navigation}) => {
+export const RedefPwd = ({ navigation }) => {
     return (
         <Container>
             <Logo source={require("../../../assets/logo.png")} />
 
-            <Title>Recuperar senha</Title>
+            <Title>Redefinir senha</Title>
 
-            <Text>Digite abaixo seu email cadastrado que enviaremos um link para recuperação de senha  </Text>
+            <Text>
+            Insira e confirme a sua nova senha
+            </Text>
 
-            <Input
-                placeholder="Usuário ou email"
+            <Input placeholder="Nova senha"
+             secureTextEntry
             />
-
-            <Button onPress={() => navigation.navigate ("Verify")}>
-                <ButtonTittle >Continuar</ButtonTittle>
+            
+            <Input placeholder="Confirmar nova senha"
+             secureTextEntry
+            />
+            
+            <Button>
+            <ButtonTittle>Entrar</ButtonTittle>
             </Button>
+            
+            
+            
+            
+
+
         </Container>
-
-
     )
 }

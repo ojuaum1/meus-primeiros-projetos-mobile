@@ -10,12 +10,12 @@ import { ButtonTittle, ButtonTittleGoogle } from "../../components/buttonTitle/S
 import { AntDesign } from '@expo/vector-icons';
 import { ContentAccount, TextAccount } from "./Style"
 import { Password } from "../PwsRec/Password"
-import { Navigation } from "../navigation/Navigation"
+import { navigation } from "../navigation/Navigation"
 
 
 
 
-export const Login = ({}) => {
+export const Login = ({navigation}) => {
     return (
         <Container>
 
@@ -34,13 +34,9 @@ export const Login = ({}) => {
                 secureTextEntry
             />
 
-            <LinkMedium
-            onpress={() => Navigation.navigate ("Password")}
-            // onPress={() => Navigation.navigate ("Password")}
-            > Esqueceu sua senha?</LinkMedium>
+            <LinkMedium  onPress={() => navigation.navigate ("Recuperar senha")} > Esqueceu sua senha?</LinkMedium>
 
-            <Button
-             >
+            <Button >
                 <ButtonTittle>Entrar</ButtonTittle>
             </Button>
 
