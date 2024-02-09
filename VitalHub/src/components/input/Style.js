@@ -1,3 +1,5 @@
+
+import { TextInput } from "react-native";
 import styled from "styled-components";
 
 export const Input = styled.TextInput.attrs({
@@ -12,20 +14,12 @@ border: 2px solid #49b3ba;
 border-radius: 5px;
 font-family: "MontserratAlternates_600SemiBold";
 `
-
-export const Inputquadrado = styled(Input).attrs({
-    placeholderTextColor: "#34898f"
+export const InputNumbers = styled(Input).attrs({
     
-})
-`
-width:65px;
-height:62px;
-padding: 8px 20px;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 8px;
-font-size:25px;
-text-align:center;
-margin-bottom:15px;
+})`
+width: 65px;
+height: 62px;
+margin-bottom: 30px;
+font-size: 25px;
+text-align: center;
 `

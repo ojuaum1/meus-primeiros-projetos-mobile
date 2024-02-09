@@ -16,11 +16,10 @@ color: #4D659D;
 font-size: 16px;
 `
 
-export const Linkviar = styled.Text`
-align-items: center;
-margin-top: 15px;
-justify-content: center;
-text-decoration: underline;
-color:#344F8F;
+export const LinkReenviar = styled.Text`
+margin-top: 30px;
 font-size: 16px;
+font-family: "MontserratAlternates_600SemiBold";
+color: #344F8F;
+text-decoration: underline;
 `

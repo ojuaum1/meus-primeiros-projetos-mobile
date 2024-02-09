@@ -9,8 +9,9 @@ import { Image, Text, TouchableOpacity, View } from "react-native"
 import { ButtonTittle, ButtonTittleGoogle } from "../../components/buttonTitle/Style"
 import { AntDesign } from '@expo/vector-icons';
 import { ContentAccount, TextAccount } from "./Style"
-import { Password } from "../PwsRec/Password"
-import { navigation } from "../navigation/Navigation"
+
+import { Navigation } from "../navigation/Navigation"
+import { NavigationContainer } from "@react-navigation/native"
 
 
 
@@ -34,10 +35,15 @@ export const Login = ({navigation}) => {
                 secureTextEntry
             />
 
-            <LinkMedium  onPress={() => navigation.navigate ("Recuperar senha")} > Esqueceu sua senha?</LinkMedium>
+            <LinkMedium
+            onPress={() => navigation.navigate ("RecuperarSenha")}
+            > Esqueceu sua senha?</LinkMedium>
 
-            <Button >
-                <ButtonTittle>Entrar</ButtonTittle>
+            <Button
+             >
+                <ButtonTittle 
+                onPress={() => navigation.navigate ("Home")}
+                >Entrar</ButtonTittle>
             </Button>
 
 
@@ -49,7 +55,9 @@ export const Login = ({navigation}) => {
 
             <ContentAccount>
                 <TextAccount>Não tem conta?
-                    <LinkBold> Crie uma conta agora!</LinkBold>
+                    <LinkBold
+                     onPress={() => navigation.navigate ("NewAccount")}
+                    > Crie uma conta agora!</LinkBold>
                 </TextAccount>
             </ContentAccount>
 

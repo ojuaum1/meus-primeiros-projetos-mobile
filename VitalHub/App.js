@@ -8,9 +8,16 @@ const Stack = createNativeStackNavigator()
 
 import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium } from "@expo-google-fonts/montserrat-alternates";
 import { Login } from "./src/sceens/login/Login";
-import { Password } from "./src/sceens/PwsRec/Password";
-import { Verify } from "./src/sceens/verifyEmail/VerifyEmail";
-import { RedefPwd } from "./src/sceens/redefpwd/RedefPwd";
+
+import { EmailVerify, VerificarEmail, Verify } from "./src/sceens/emailVerify/EmailVerify";
+
+import { NewPassword } from "./src/sceens/newPassword/NewPassword";
+import { NewAccount } from "./src/sceens/newAccount/NewAccount"
+import { Password } from "./src/sceens/password/Password"
+import { Home } from "./src/sceens/home/Home"
+
+
+
 
 export default function app() {
 
@@ -18,7 +25,7 @@ export default function app() {
     MontserratAlternates_600SemiBold,
     MontserratAlternates_500Medium,
     MontserratAlternates_700Bold,
-    Quicksand_500Medium
+    Quicksand_500Medium,
   });
 
   if (!fontsLoaded && !fontsError) {
@@ -37,8 +44,8 @@ export default function app() {
     <NavigationContainer>
 
       <Stack.Navigator>
-        {/* 
-        <Stack.Screen
+
+        {/* <Stack.Screen
 
           //nome da tela 
           name='Navigation'
@@ -48,8 +55,9 @@ export default function app() {
 
           //titulo da tela
           options={{ title: 'Navigation' }}
-          
+
         /> */}
+
 
         <Stack.Screen
           name="Login"
@@ -58,23 +66,35 @@ export default function app() {
         />
 
         <Stack.Screen
-          name="Recuperar senha"
+          name="RecuperarSenha"
           component={Password}
-          options={{ title: "Recuperar senha" }}
+          options={{ title: "Recuperar Senha" }}
         />
 
         <Stack.Screen
           name="Verify"
           component={Verify}
-          options={{ title: "Verify" }}
+          options={{ title: "Verificar Email" }}
         />
 
         <Stack.Screen
-          name="RedefPwd"
-          component={RedefPwd}
-          options={{ title: "RedefPwd" }}
+          name="NewPassword"
+          component={NewPassword}
+          options={{ title: "Redefinir senha" }}
         />
-        
+
+        <Stack.Screen
+          name="NewAccount"
+          component={NewAccount}
+          options={{ title: "Criar conta" }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Home" }}
+        />
+
+
 
 
       </Stack.Navigator>

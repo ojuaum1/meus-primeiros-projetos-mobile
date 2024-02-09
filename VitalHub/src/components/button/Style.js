@@ -17,3 +17,8 @@ border-color: #496BBA;
 flex-direction: row;
 gap: 15px;
 `
+
+export const ButtonNewPws = styled(Button)`
+margin-top: 30px;
+`
+
