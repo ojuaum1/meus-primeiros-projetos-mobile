@@ -12,5 +12,5 @@ export const ButtonTextStyle=styled.Text`
 font-size: 12px;
 font-family:'MontserratAlternates_600SemiBold';
 
-${props => props.clickButton ? css`color:#fbfbfb`: css`color:#607Ec5`}
+${props => props.clickButton ? css`color:#fbfbfb`: css`color:#607EC5`}
 `

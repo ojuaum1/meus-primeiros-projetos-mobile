@@ -7,6 +7,7 @@ import { Header } from "../../components/header/Header"
 import { useState } from "react"
 import { FilterAppointament } from "./style"
 import { AbsListAppointament } from "../../components/absListAppointment/absListAppointment"
+import { CardPerfil } from "../../components/cardPerfil/CardPerfil"
 
 
 const Consultas = [
@@ -43,18 +44,25 @@ export const Home = () => {
                 />
           
                 <AbsListAppointament 
-                 textButton={"realizado"}
+                 textButton={"realizadas"}
                  clickButton={statusLista === "realizado"}
                  onPress={() => setStatusLista("realizado")}
                 />
            
                 <AbsListAppointament 
-                 textButton={"cancelado"}
+                 textButton={"canceladas"}
                  clickButton={statusLista === "cancelado"}
                  onPress={() => setStatusLista("cancelado")}
                 />
                 
             </FilterAppointament> 
+
+            <CardPerfil>
+                {/* img */}
+                {/* <Textinhos>
+
+                </Textinhos> */}
+            </CardPerfil>
 
 
         </Container>
