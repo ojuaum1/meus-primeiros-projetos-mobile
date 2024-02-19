@@ -14,8 +14,7 @@ import { EmailVerify, VerificarEmail, Verify } from "./src/sceens/emailVerify/Em
 import { NewPassword } from "./src/sceens/newPassword/NewPassword";
 import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
-import { Home } from "./src/sceens/home/Home"
-
+import { Home } from "./src/sceens/home/Home";
 
 
 
@@ -45,7 +44,13 @@ export default function app() {
 
       <Stack.Navigator>
 
-        {/* <Stack.Screen
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Home" }}
+        />
+
+        <Stack.Screen
 
           //nome da tela 
           name='Navigation'
@@ -56,9 +61,7 @@ export default function app() {
           //titulo da tela
           options={{ title: 'Navigation' }}
 
-        /> */}
-
-
+        />
         <Stack.Screen
           name="Login"
           component={Login}
@@ -88,11 +91,7 @@ export default function app() {
           component={NewAccount}
           options={{ title: "Criar conta" }}
         />
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ title: "Home" }}
-        />
+
 
 
 

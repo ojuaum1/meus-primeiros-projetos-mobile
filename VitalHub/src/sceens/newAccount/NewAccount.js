@@ -32,7 +32,7 @@ export const NewAccount = ({navigation}) => {
             />
             <Button>
                 <ButtonTittle
-                onPress={() => navigation.navigate("Login")}
+                onPress={() => navigation.navigate("Home")}
                 >Cadastrar</ButtonTittle>
             </Button>
 
