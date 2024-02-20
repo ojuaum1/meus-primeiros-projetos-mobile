@@ -8,17 +8,19 @@ import { useState } from "react"
 import { FilterAppointament } from "./style"
 import { AbsListAppointament } from "../../components/absListAppointment/absListAppointment"
 import { CardPerfil } from "../../components/cardPerfil/CardPerfil"
+import { ListComponent } from "../../components/list/List"
+import { AppointmentCard } from "../../components/appointmentCard/AppointmentCard"
 
 
 const Consultas = [
-    {id: 1, nome: "joao", situacao: "pendente"},
-    {id: 2, nome: "joao", situacao: "realizado"},
-    {id: 3, nome: "joao", situacao: "cancelado"},
-    {id: 4, nome: "joao", situacao: "realizado"},
-    {id: 5, nome: "joao", situacao: "cancelado"},
+    { id: 1, nome: "joao", situacao: "pendente" },
+    { id: 2, nome: "joao", situacao: "realizado" },
+    { id: 3, nome: "joao", situacao: "cancelado" },
+    { id: 4, nome: "joao", situacao: "realizado" },
+    { id: 5, nome: "joao", situacao: "cancelado" },
 ]
 export const Home = () => {
-    const[statusLista,setStatusLista] = useState("pendente")
+    const [statusLista, setStatusLista] = useState("pendente")
     return (
         <Container>
 
@@ -32,37 +34,39 @@ export const Home = () => {
 
             {/* Filtros (button) */}
 
-           
 
-        
+
+
             <FilterAppointament>
-                
+
                 <AbsListAppointament
-                textButton={"Agendadas"}
-                clickButton={statusLista === "pendente"}
-                onPress={() => setStatusLista("pendente")}
+                    textButton={"Agendadas"}
+                    clickButton={statusLista === "pendente"}
+                    onPress={() => setStatusLista("pendente")}
                 />
-          
-                <AbsListAppointament 
-                 textButton={"realizadas"}
-                 clickButton={statusLista === "realizado"}
-                 onPress={() => setStatusLista("realizado")}
-                />
-           
-                <AbsListAppointament 
-                 textButton={"canceladas"}
-                 clickButton={statusLista === "cancelado"}
-                 onPress={() => setStatusLista("cancelado")}
-                />
-                
-            </FilterAppointament> 
 
-            <CardPerfil>
-                {/* img */}
-                {/* <Textinhos>
+                <AbsListAppointament
+                    textButton={"realizadas"}
+                    clickButton={statusLista === "realizado"}
+                    onPress={() => setStatusLista("realizado")}
+                />
 
-                </Textinhos> */}
-            </CardPerfil>
+                <AbsListAppointament
+                    textButton={"canceladas"}
+                    clickButton={statusLista === "cancelado"}
+                    onPress={() => setStatusLista("cancelado")}
+                />
+
+            </FilterAppointament>
+            {/* cards */}
+            {/* lista (flatlist) */}
+
+            <ListComponent
+
+/>
+<AppointmentCard/>
+
+
 
 
         </Container>
