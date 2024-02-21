@@ -62,9 +62,17 @@ export const Home = () => {
             {/* lista (flatlist) */}
 
             <ListComponent
+ data={Consultas}
+ keyExtractor={(item) => item.id}
 
+ renderItem={({ item }) =>
+     statusLista == item.situacao && (
+         <AppointmentCard nome= {item.nome} situacao={item.situacao}/>
+     )}
 />
-<AppointmentCard/>
+           
+         
+
 
 
 
