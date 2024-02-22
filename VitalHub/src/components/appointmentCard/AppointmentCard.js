@@ -1,41 +1,74 @@
-import { AntDesign } from '@expo/vector-icons'; // Importa o ícone AntDesign do pacote '@expo/vector-icons'
-import { ButtonCard, ButtonText, ClockCard, ContainerCardsList, ContentCard, DataProfileCard, ProfileData, ProfileImage, ProfileName, TextAge, TextBold, ViewRow } from "./Style";
+import { AntDesign } from "@expo/vector-icons";
+import {
+  ButtonCard,
+  ButtonText,
+  ClockCard,
+  ContainerCardsList,
+  ContentCard,
+  DataProfileCard,
+  ProfileData,
+  ProfileImage,
+  ProfileName,
+  TextAge,
+  TextBold,
+  ViewRow,
+} from "./Style";
 
-export const AppointmentCard = () => { // Define um componente de função chamado AppointmentCard
-    return (
-        <ContainerCardsList> 
+export const AppointmentCard = ({
+  situacao = "pendente",
+  onPressCancel,
+  onPressAppointment,
+}) => {
+  return (
+    // container principal
+    <ContainerCardsList>
+      {/* imagem de perfil */}
+      <ProfileImage source={{ uri: "https://github.com/ojuaum1.png" }} />
 
-           
-            <ProfileImage source={{uri: "https://github.com/ojuaum1.png"}} /> 
+      {/* conteúdo ao lado da imagem de perfil */}
+      <ContentCard>
+        <DataProfileCard>
+          <ProfileName>João</ProfileName>
+          
+          <ProfileData>
+            <TextAge>45 anos</TextAge>
+            <TextBold>Rotina</TextBold>
+          </ProfileData>
+        </DataProfileCard>
 
-            
-            <ContentCard> 
+        <ViewRow>
+          <ClockCard situacao={situacao}>
+            <AntDesign
+              name="clockcircle"
+              size={14}
+              color={situacao == "pendente" ? "#49B3BA" : "#8C8A97"}
+            />
 
-                <DataProfileCard>
+            <TextBold situacao={situacao} color={"#49B3BA"}>
+              14:00
+            </TextBold>
+          </ClockCard>
 
-                    <ProfileName>joao</ProfileName> 
+            {/* valida e mostra o tipo de botão conforme a situação */}
 
-                    <ProfileData>
-                        <TextAge>45</TextAge> 
-                        <TextBold>Rotina</TextBold>
-                    </ProfileData>
-
-                </DataProfileCard>
-
-                <ViewRow> 
-
-                    <ClockCard> 
-                        <AntDesign name="clockcircle" size={24} color="black" /> 
-                        <TextBold>14:00</TextBold> 
-                    </ClockCard>
-                    
-                    <ButtonCard> 
-                        <ButtonText>Cancelar</ButtonText> 
+            {
+                situacao == "cancelado" ? (
+                    <>
+                    </>
+                ) : situacao == "pendente" ? (
+                    <ButtonCard onPress={onPressCancel}>
+                        <ButtonText situacao={situacao}>Cancelar</ButtonText>
                     </ButtonCard>
+                ) : (
+                    <ButtonCard onPress={onPressAppointment}>
+                        <ButtonText situacao={situacao}>Ver Prontuário</ButtonText>
+                    </ButtonCard>
+                )
+            }
 
-                </ViewRow> 
-
-            </ContentCard>
-        </ContainerCardsList>
-    )
-}
+          
+        </ViewRow>
+      </ContentCard>
+    </ContainerCardsList>
+  );
+};

@@ -10,6 +10,9 @@ import { AbsListAppointament } from "../../components/absListAppointment/absList
 import { CardPerfil } from "../../components/cardPerfil/CardPerfil"
 import { ListComponent } from "../../components/list/List"
 import { AppointmentCard } from "../../components/appointmentCard/AppointmentCard"
+import CancellationModal from "../../components/cancelationModal/CancelationModal"
+import AppointmentModal from "../../components/appointmentModal/AppointmentModal"
+
 
 
 const Consultas = [
@@ -19,8 +22,11 @@ const Consultas = [
     { id: 4, nome: "joao", situacao: "realizado" },
     { id: 5, nome: "joao", situacao: "cancelado" },
 ]
+
 export const Home = () => {
     const [statusLista, setStatusLista] = useState("pendente")
+    const [showModalCancel, setShowModalCancel] = useState(false);
+    const [showModalAppointment, setShowAppointment] = useState(false);
     return (
         <Container>
 
@@ -62,20 +68,33 @@ export const Home = () => {
             {/* lista (flatlist) */}
 
             <ListComponent
- data={Consultas}
- keyExtractor={(item) => item.id}
+                data={Consultas}
+                keyExtractor={(item) => item.id}
 
- renderItem={({ item }) =>
-     statusLista == item.situacao && (
-         <AppointmentCard nome= {item.nome} situacao={item.situacao}/>
-     )}
-/>
-           
-         
+                renderItem={({ item }) =>
+                    statusLista == item.situacao && (
+                        <AppointmentCard
+                            situacao={item.situacao}
+                            onPressCancel={() => setShowModalCancel(true)}
+                            onPressAppointment={() => setShowAppointment(true)}
+                        />
+                    )
+                }
+            />
 
 
 
 
+
+            <CancellationModal
+                visible={showModalCancel}
+                setShowModalCancel={setShowModalCancel}
+            />
+
+            <AppointmentModal
+                visible={showModalAppointment}
+                setShowAppointment={setShowAppointment}
+            />
 
         </Container>
 
