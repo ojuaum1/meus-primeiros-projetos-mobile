@@ -7,6 +7,33 @@ export  const Navigation = ({navigation}) => {
             title="Login"
             onPress={() => navigation.navigate ("Login")}
             />
+            <Button
+            title="Verify"
+            onPress={() => navigation.navigate ("Verify")}
+            />
+            <Button
+            title="NewPassword"
+            onPress={() => navigation.navigate ("NewPassword")}
+            />
+            <Button
+            title="NewAccount"
+            onPress={() => navigation.navigate ("NewAccount")}
+            />
+            <Button
+            title="ProntInsert"
+            onPress={() => navigation.navigate ("ProntInsert")}
+            />
+            <Button
+            title="Home"
+            onPress={() => navigation.navigate ("Home")}
+            />
+        
+            <Button
+            title="Profile"
+            onPress={() => navigation.navigate ("Profile")}
+            />
+        
+          
         </View>
         
     )

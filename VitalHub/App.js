@@ -15,6 +15,8 @@ import { NewPassword } from "./src/sceens/newPassword/NewPassword";
 import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
 import { Home } from "./src/sceens/home/Home";
+import { ProntInsert } from "./src/sceens/ProntInsert/ProntInsert";
+import { Profile } from "./src/sceens/profile/Profile";
 
 
 
@@ -44,11 +46,6 @@ export default function app() {
 
       <Stack.Navigator>
 
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ title: "Home" }}
-        />
 
         <Stack.Screen
 
@@ -62,6 +59,22 @@ export default function app() {
           options={{ title: 'Navigation' }}
 
         />
+        <Stack.Screen
+          name="Profile"
+          component={Profile}
+          options={{ title: "Profile" }}
+        />
+        <Stack.Screen
+          name="ProntInsert"
+          component={ProntInsert}
+          options={{ title: "InserirProntuario" }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Home" }}
+        />
+
         <Stack.Screen
           name="Login"
           component={Login}
@@ -91,7 +104,6 @@ export default function app() {
           component={NewAccount}
           options={{ title: "Criar conta" }}
         />
-
 
 
 
