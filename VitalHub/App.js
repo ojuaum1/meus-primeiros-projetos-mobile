@@ -6,7 +6,7 @@ import { Navigation } from "./src/sceens/navigation/Navigation";
 
 const Stack = createNativeStackNavigator()
 
-import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium } from "@expo-google-fonts/montserrat-alternates";
+import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium, Quicksand_700Bold, Quicksand_600SemiBold } from "@expo-google-fonts/montserrat-alternates";
 import { Login } from "./src/sceens/login/Login";
 
 import { EmailVerify, VerificarEmail, Verify } from "./src/sceens/emailVerify/EmailVerify";
@@ -15,8 +15,11 @@ import { NewPassword } from "./src/sceens/newPassword/NewPassword";
 import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
 import { Home } from "./src/sceens/home/Home";
-import { ProntInsert } from "./src/sceens/ProntInsert/ProntInsert";
 import { Profile } from "./src/sceens/profile/Profile";
+import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord";
+import { ProfileEdit } from "./src/sceens/profile/ProfileEdit";
+import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit";
+import { SelectClinic } from "./src/sceens/SelectClinic/SelectClinic";
 
 
 
@@ -27,6 +30,9 @@ export default function app() {
     MontserratAlternates_500Medium,
     MontserratAlternates_700Bold,
     Quicksand_500Medium,
+    Quicksand_700Bold,
+    Quicksand_600SemiBold
+
   });
 
   if (!fontsLoaded && !fontsError) {
@@ -45,10 +51,9 @@ export default function app() {
     <NavigationContainer>
 
       <Stack.Navigator>
-
-
         <Stack.Screen
 
+          
           //nome da tela 
           name='Navigation'
 
@@ -57,24 +62,28 @@ export default function app() {
 
           //titulo da tela
           options={{ title: 'Navigation' }}
-
+        />
+       <Stack.Screen
+           name="SelectClinic"
+           component={SelectClinic}
+           options={{ title: "SelectClinic" }}
+         />
+       <Stack.Screen
+           name="Home"
+           component={Home}
+           options={{ title: "Home" }}
+         />
+       
+        <Stack.Screen
+          name="ProfileEdit"
+          component={ProfileEdit}
+          options={{ title: "Profile Edit" }}
         />
         <Stack.Screen
           name="Profile"
           component={Profile}
-          options={{ title: "Profile" }}
+          options={{ title: "Perfil" }}
         />
-        <Stack.Screen
-          name="ProntInsert"
-          component={ProntInsert}
-          options={{ title: "InserirProntuario" }}
-        />
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ title: "Home" }}
-        />
-
         <Stack.Screen
           name="Login"
           component={Login}
@@ -103,6 +112,19 @@ export default function app() {
           name="NewAccount"
           component={NewAccount}
           options={{ title: "Criar conta" }}
+        />
+
+
+        <Stack.Screen
+          name="MedicalRecord"
+          component={MedicalRecord}
+          options={{ title: "MedicalRecord" }}
+        />
+
+        <Stack.Screen
+          name="MedicalRecordEdit"
+          component={MedicalRecordEdit}
+          options={{ title: "MedicalRecordEdit" }}
         />
 
 

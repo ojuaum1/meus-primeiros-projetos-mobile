@@ -6,3 +6,8 @@ flex-direction: row;
 justify-content: space-between;
 margin-top: 38px;
 `
+
+export const MedicalIcon = styled.Image`
+
+
+`

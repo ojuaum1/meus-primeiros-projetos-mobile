@@ -18,6 +18,7 @@ export const AppointmentCard = ({
   situacao = "pendente",
   onPressCancel,
   onPressAppointment,
+  navigation
 }) => {
   return (
     // container principal
@@ -29,7 +30,7 @@ export const AppointmentCard = ({
       <ContentCard>
         <DataProfileCard>
           <ProfileName>João</ProfileName>
-          
+
           <ProfileData>
             <TextAge>45 anos</TextAge>
             <TextBold>Rotina</TextBold>

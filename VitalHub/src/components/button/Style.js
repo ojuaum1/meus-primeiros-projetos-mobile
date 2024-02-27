@@ -1,28 +1,35 @@
 import styled from "styled-components";
 
 export const Button = styled.TouchableOpacity`
-    width: 90% ;
-    height: 44px ;
-
-    background-color: #496bba ;
-    border-radius: 5px ;
-    border: 1px solid #496bba ;
-
-    margin-top: 15px ;
-    padding: 12px 8px 12px 8px ;
-
-    align-items: center ;
-    justify-content:center ;
+width: 90%;
+height: 44px;
+background-color: #496BBA;
+justify-content: center;
+align-items: center;
+margin-top: 15px;
+border-radius: 5px;
+padding: 12px 8px 12px 8px;
+border: #496bba;
+`
+export const ButtonGoogle = styled(Button)`
+background-color: #FAFAFA;
+border-color: #496BBA;
+flex-direction: row;
+gap: 15px;
 `
 
-export const ButtonGoogle = styled(Button)`
-    background-color: #FAFAFA ;
-    flex-direction: row ;
-    gap: 10px;
+export const ButtonNewPws = styled(Button)`
+margin-top: 30px;
+`
+
+export const buttonModal = styled(Button)`
+width: 80%;
 `
 export const ButtonSecondary = styled(Button)`
     background-color: transparent;
     border: none;
+    display: flex;
+    align-self: center;
 `
 
 
@@ -39,3 +46,56 @@ text-transform: capitalize;
 text-decoration: underline;
 color: #344f8f;
 `
+export const ButtonProfile = styled(Button)`
+margin-left: 10px;
+`
+export const TextButtonPront = styled.Text`
+font-size: 14px;
+font-family: "MontserratAlternates_700Bold";
+text-transform: uppercase;
+color: #fff;
+`
+export const ButtonEdit = styled(Button)`
+background-color: #ACABB7;
+margin-left: 10px;
+border-color: transparent;
+`
+
+export const ButtonExit = styled(Button)`
+width: 190px;
+background-color: #ACABB7;
+border-color: transparent;
+display: flex;
+align-self: center;
+justify-content: center;
+`
+export const ButtonEditMedRec = styled(ButtonEdit)`
+`
+export const ButtonEditProfile = styled(ButtonEdit)
+``
+export const ButtonCancell= styled(ButtonSecondary)`
+margin-left: -35px;
+`
+export const ButtonAppointament = styled.TouchableOpacity`
+width: 60px;
+height: 60px;
+background-color: #49B3BA;
+justify-content: center;
+align-items: center;
+margin-top: 15px;
+border-radius: 5px;
+padding: 12px 8px 12px 8px;
+align-self: flex-end;
+margin-bottom: 50px;
+margin-right: 30px;
+`
+export const ButtonScheduleModal = styled(Button)`
+    width: 100%;
+    margin-top: 30px;
+`
+export const TextButton = styled.Text`
+    text-align: center;
+    font-size: 14px;
+    font-family: 'MontserratAlternates_700Bold';
+    color: #FFFFFF;
+    `

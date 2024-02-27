@@ -8,21 +8,25 @@ export const AppointmentModalpront = styled.View`
 `
 export const ModalContentpront = styled.View`
     padding: 30px 30px 10px ;
-    width:  90%;
+    width:  100%;
+    height: 100%;
     border-radius: 10px ;
     background-color:#fff ;
     align-items:center ;
 `
 export const ProfileImagePront =styled.Image`
-width: 100%;
-height:180px;
-border-radius:5px;
+width:390px;
+height:220px;
+margin-top: -30px;
 `
-
 export const Informations = styled.View`
 align-items: center;
 justify-content: space-between;
 display: flex;
 flex-direction: row;
-
+`
+export const ImagePront = styled.Image`
+width: 285px;
+height: 180px;
+border-radius: 15px;
 `

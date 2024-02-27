@@ -1,14 +1,12 @@
-
+import { ContainerScroll } from "../../components/ScrollView/ScrollView"
 import { Informations, ProfileImagePront } from "../../components/appointmentModal/Style"
+import { Button, ButtonCancell, ButtonEdit, ButtonEditMedRec, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
 import { Container } from "../../components/container/Style"
-import { Age, Email, Title } from "../../components/title/Style"
-import { InputPront, InputProntBig, InputProntDia, TextInput } from "../../components/input/Style"
-import { Button, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
-import { ScrollView } from "react-native"
-import { ContainerScroll } from "../../components/scrollView/ScrollView"
+import { InputPront, InputProntBig, InputProntBigEdit, InputProntEdit } from "../../components/input/Style"
+import { Age, Email, TextInputDesc, TextInputDiag, TextInputMed, Title } from "../../components/title/Style"
 
 
-export const ProntInsert = () => {
+export const MedicalRecordEdit = ({navigation}) => {
     return (
         <Container>
 
@@ -16,37 +14,33 @@ export const ProntInsert = () => {
 
             <Title> João Oliveira </Title>
 
+
             <Informations>
                 <Age>19 anos</Age>
                 <Email>joao.oliveiira.pda@gmail.com</Email>
             </Informations>
 
             <ContainerScroll>
-                <TextInput>
+                <TextInputDesc>
                     Descrição da consulta
-                </TextInput>
+                </TextInputDesc>
 
-                <InputProntBig
-                    placeholder='Descrição'
+                <InputProntBigEdit
                 />
 
-                <TextInput>
+                <TextInputDiag>
                     Diagnóstico do paciente
-                </TextInput>
+                </TextInputDiag>
 
-                <InputProntDia
-                    placeholder="Diagnóstico"
+                <InputProntEdit
                 />
 
-
-                <TextInput>
+                <TextInputMed>
                     Prescrição médica
-                </TextInput>
-                <InputProntBig
-                    placeholder="Prescrição médica"
-                />
+                </TextInputMed>
+                <InputProntBigEdit />
 
-                <Button>
+                <Button onPress={() => navigation.navigate("Home")}>
                     <ButtonTitle>Salvar</ButtonTitle>
                 </Button>
 
@@ -54,17 +48,12 @@ export const ProntInsert = () => {
                     <ButtonTitle>Editar</ButtonTitle>
                 </Button>
 
-                <ButtonSecondary onPress={() => setShowModalAppointment(false)}>
+                <ButtonCancell onPress={() => navigation.navigate("Home")}>
                     <ButtonSecondaryTitle>
                         Cancelar
                     </ButtonSecondaryTitle>
-                </ButtonSecondary>
+                </ButtonCancell>
             </ContainerScroll>
-
-
-
-
-
         </Container>
     )
 }

@@ -8,8 +8,8 @@ export const Header = () => {
         <BoxUser>
           <ImageUser source={{ uri: "https://github.com/ojuaum1.png" }} />
           <DataUser>
-            <TextDefault>Bem vindo</TextDefault>
-            <NameUser>Dr.joao</NameUser>
+            <TextDefault>Bem vindo(a)</TextDefault>
+            <NameUser>Dr.Joao</NameUser>
           </DataUser>
         </BoxUser>
 

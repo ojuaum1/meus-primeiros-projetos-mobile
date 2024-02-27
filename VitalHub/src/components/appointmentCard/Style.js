@@ -60,3 +60,9 @@ export const ButtonCard = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
     color: ${(props) => props.situacao == "pendente" ? "#c81d25" : "#344f8f"} ;
 `
+export const ButtonTextProfile = styled.Text`
+color: #fff;
+font-family:"MontserratAlternates_700Bold";
+text-transform: uppercase;
+text-align: center;
+`

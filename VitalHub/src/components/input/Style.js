@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Text } from "../texts/Style";
 
 export const Input = styled.TextInput.attrs({
     placeholderTextColor: "#34898f"
@@ -19,15 +18,24 @@ margin-bottom: 30px;
 font-size: 25px;
 text-align: center;
 `
+export const InputScheduleModal = styled(Input)`
+    width: 100%;
+`
 export const InputProntBig = styled(Input)`
-height: 120px;
-margin-top: -15px;
+height: 120px ;
+margin-top: 10px;
 `   
+export const InputProntBigEdit = styled(InputProntBig)`
+background-color: #E6E6E6;
+border-color: transparent;
+`
+export const InputProntEdit = styled(Input)`
+background-color: #E6E6E6;
+border-color: transparent;
+`
+
 export const InputPront = styled(Input)`  
 margin-top: 10px;
-`  
-export const InputProntDia = styled(Input)`  
-margin-top: -15;
 `  
 export const InputProfile = styled(Input)`
 background-color: #E6E6E6;
@@ -39,13 +47,19 @@ export const InputAddress = styled(InputProfile)`
 width: 145px;
 height: 50px;
 `
-export const TextInput = styled(Text)`
+export const InputLabel = styled.Text`
     font-size: 16px;
     font-family: 'Quicksand_600SemiBold';
+    margin-bottom: -5px;
     margin-top: 20px;
     color: #000000;
-    //align-items: start;
-    //align-self: flex-start;
-    //justify-content: start;
-    text-align: left;
+    align-items: start;
+    align-self: flex-start;
+    justify-content: start;
+`
+
+
+export const InputAppointmentLevel = styled(Input)`
+    width: 30%;
+    text-align: center;
 `

@@ -4,5 +4,9 @@ export const ContainerScroll = styled.ScrollView`
     margin-left: 10.55%;
     width: 100%;
     height: 90%;
-    margin-bottom: 30px;
+    margin-left: 40px;
+    
+`
+export const ContainerScrollProfile = styled(ContainerScroll)`
+    margin-left: 10px;
 `
