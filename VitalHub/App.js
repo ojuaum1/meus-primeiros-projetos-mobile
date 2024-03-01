@@ -19,7 +19,11 @@ import { Profile } from "./src/sceens/profile/Profile";
 import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord";
 import { ProfileEdit } from "./src/sceens/profile/ProfileEdit";
 import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit";
-import { SelectClinic } from "./src/sceens/SelectClinic/SelectClinic";
+import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
+import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
+import CustomCalendar from "./src/components/calendars/Calendars";
+import { TelaCalendars } from "./src/sceens/TelaCalendars/TelaCalendars";
+
 
 
 
@@ -51,9 +55,9 @@ export default function app() {
     <NavigationContainer>
 
       <Stack.Navigator>
+
         <Stack.Screen
 
-          
           //nome da tela 
           name='Navigation'
 
@@ -63,17 +67,11 @@ export default function app() {
           //titulo da tela
           options={{ title: 'Navigation' }}
         />
-       <Stack.Screen
-           name="SelectClinic"
-           component={SelectClinic}
-           options={{ title: "SelectClinic" }}
-         />
-       <Stack.Screen
-           name="Home"
-           component={Home}
-           options={{ title: "Home" }}
-         />
-       
+        <Stack.Screen
+          name="TelaCalendars"
+          component={TelaCalendars}
+          options={{ title: "TelaCalendars" }}
+        />
         <Stack.Screen
           name="ProfileEdit"
           component={ProfileEdit}
@@ -114,6 +112,11 @@ export default function app() {
           options={{ title: "Criar conta" }}
         />
 
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Home" }}
+        />
 
         <Stack.Screen
           name="MedicalRecord"
@@ -126,9 +129,17 @@ export default function app() {
           component={MedicalRecordEdit}
           options={{ title: "MedicalRecordEdit" }}
         />
+        <Stack.Screen
+          name="ChoiceClinic"
+          component={ChoiceClinic}
+          options={{ title: "ChoiceClinic" }}
+        />
 
-
-
+        <Stack.Screen
+          name="ChoiceDoctor"
+          component={ChoiceDoctor}
+          options={{ title: "ChoiceDoctor" }}
+        />
 
       </Stack.Navigator>
 

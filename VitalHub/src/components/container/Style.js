@@ -7,15 +7,6 @@ export const Container = styled.SafeAreaView`
     background-color: #FAFAFA;
     font-family: "MontserratAlternates_500Medium";
 `
-export const DoubleView = styled.SafeAreaView`
-    width: 90%; 
-    max-width: 90%;
-    margin-top:24px;
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-between;
-`
 export const ContainerHeader = styled(LinearGradient).attrs({
     colors: ["#60BFC5", "#496BBA"],
     start: { x: -0.05, y: 1.08 },
@@ -34,10 +25,3 @@ export const ContainerHeader = styled(LinearGradient).attrs({
     box-shadow: 0px 4px 15px #00000014;
   `;
 
-export const ScheduleModalView = styled(DoubleView)`
-    width: 100%;
-    max-width: 100%;
-    align-self: flex-start;
-    margin-top: 0px;
-    text-align: center;
-`

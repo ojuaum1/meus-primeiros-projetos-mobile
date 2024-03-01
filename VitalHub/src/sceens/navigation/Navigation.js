@@ -4,18 +4,14 @@ export  const Navigation = ({navigation}) => {
     return(
         <View style={{flex: 1, alignItems: "center" , justifyContent: "center" }}>
             <Button
-            title="Login"
-            onPress={() => navigation.navigate ("Login")}
+            title="TelaCalendars"
+            onPress={() => navigation.navigate ("TelaCalendars")}
             />
             <Button
-            title="SelectClinic"
-            onPress={() => navigation.navigate ("SelectClinic")}
+            title="Profile"
+            onPress={() => navigation.navigate ("Profile")}
             />
-            <Button
-            title="Home"
-            onPress={() => navigation.navigate ("Home")}
-            />
-       
+
         </View>
         
     )

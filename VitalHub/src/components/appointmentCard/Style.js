@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
 import { Title } from "../../components/title/Style";
 
 export const ContainerCardsList = styled.View`
@@ -26,6 +26,7 @@ export const DataProfileCard = styled.View`
 `
 export const ProfileName = styled(Title)`   
     font-size: 16px ;
+    
 `
 export const ProfileData = styled.View`
     flex-direction: row ;
@@ -65,4 +66,17 @@ color: #fff;
 font-family:"MontserratAlternates_700Bold";
 text-transform: uppercase;
 text-align: center;
+`
+export const ClinicCard = styled(DataProfileCard)`
+width: 90%;
+justify-content: space-between;
+height: 20%;
+background-color: white;
+elevation : 8;
+/* box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.08); */
+`
+
+export const ProfileNameClinic =styled(ProfileName)`
+align-self: start;
+margin-bottom: -20px;
 `

@@ -6,10 +6,10 @@ export const Header = () => {
   return (
     <ContainerHeader>
         <BoxUser>
-          <ImageUser source={{ uri: "https://github.com/ojuaum1.png" }} />
+          <ImageUser source={{ uri: "https://github.com/Ojuaum1.png" }} />
           <DataUser>
             <TextDefault>Bem vindo(a)</TextDefault>
-            <NameUser>Dr.Joao</NameUser>
+            <NameUser>Dra.joao</NameUser>
           </DataUser>
         </BoxUser>
 

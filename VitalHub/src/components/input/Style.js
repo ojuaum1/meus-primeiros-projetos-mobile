@@ -1,4 +1,8 @@
+import { StyleSheet, View } from "react-native";
 import styled from "styled-components";
+import RNPickerSelect from 'react-native-picker-select';
+import { AntDesign } from '@expo/vector-icons';
+
 
 export const Input = styled.TextInput.attrs({
     placeholderTextColor: "#34898f"
@@ -17,9 +21,6 @@ height: 62px;
 margin-bottom: 30px;
 font-size: 25px;
 text-align: center;
-`
-export const InputScheduleModal = styled(Input)`
-    width: 100%;
 `
 export const InputProntBig = styled(Input)`
 height: 120px ;
@@ -47,19 +48,60 @@ export const InputAddress = styled(InputProfile)`
 width: 145px;
 height: 50px;
 `
-export const InputLabel = styled.Text`
-    font-size: 16px;
-    font-family: 'Quicksand_600SemiBold';
-    margin-bottom: -5px;
-    margin-top: 20px;
-    color: #000000;
-    align-items: start;
-    align-self: flex-start;
-    justify-content: start;
-`
 
+export const InputSelect = () => {
+    return (
+        <View style={pickerSelectStyles.container}>
+            <RNPickerSelect style={pickerSelectStyles}
 
-export const InputAppointmentLevel = styled(Input)`
-    width: 30%;
-    text-align: center;
-`
+                placeholder={{
+                    label: "Selecionar horário",
+                    value: null,
+                    color: '#34898F',
+                }}
+                useNativeAndroidPickerStyle={false}
+                style={pickerSelectStyles}
+
+                Icon={() => {
+                    return <AntDesign name="caretdown" size={24} color="#60BFC5" style={pickerSelectStyles.icon} />;
+                }}
+                items={[
+                    { label: '16h30m', value: 'hour1' },
+                    { label: '12h', value: 'hour2' },
+                    { label: '08h30m', value: 'hour3' }
+                ]}
+            />
+        </View>
+    )
+}
+
+const pickerSelectStyles = StyleSheet.create({
+    inputAndroid: {
+        height: 53,
+        width: 340,
+        borderColor: '#60BFC5',
+        borderWidth: 2,
+        borderRadius: 5,
+        fontFamily: 'MontserratAlternates_600SemiBold',
+        fontSize: 14,
+        padding: 16,
+        display: "flex",
+        
+
+    },
+    container: {
+        width: "100%",
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative'
+    },
+    icon: {
+        position: 'absolute',
+        right: 16,
+        top: 22,
+    },
+    placeholder: {
+        marginTop:10,
+        color: "#34898F"
+    }
+});
