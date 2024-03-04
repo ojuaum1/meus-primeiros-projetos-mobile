@@ -1,11 +1,10 @@
 
-import { ContainerScroll, ContainerScrollProfile } from "../../components/ScrollView/ScrollView"
-import { ButtonText, ButtonTextProfile } from "../../components/appointmentCard/Style"
-import { Informations } from "../../components/appointmentModal/Style"
-import { Button, ButtonEditMedRec, ButtonExit, ButtonProfile, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
-import { Input, InputAddress, InputProfile } from "../../components/input/Style"
-import { Text } from "../../components/texts/Style"
-import { Address, EmailProfile, InputCep, InputCity, NameProfile, ProfileContainer, ProfileImage, ProfileName, ProfileNameView, TextsProfile } from "./Style"
+
+import {  ButtonTextProfile } from "../../components/appointmentCard/Style"
+import { ButtonEditMedRec, ButtonExit, ButtonProfile, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
+import {  InputAddress, InputProfile } from "../../components/input/Style"
+import { ContainerScrollProfile } from "../../components/scrollView/ScrollView"
+import { Address, EmailProfile, InputCep, InputCity, NameProfile, ProfileContainer, ProfileImage,  ProfileNameView, TextsProfile } from "./Style"
 
 
 

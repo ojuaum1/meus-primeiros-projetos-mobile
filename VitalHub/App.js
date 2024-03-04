@@ -9,20 +9,21 @@ const Stack = createNativeStackNavigator()
 import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium, Quicksand_700Bold, Quicksand_600SemiBold } from "@expo-google-fonts/montserrat-alternates";
 import { Login } from "./src/sceens/login/Login";
 
-import { EmailVerify, VerificarEmail, Verify } from "./src/sceens/emailVerify/EmailVerify";
+import { Verify } from "./src/sceens/emailVerify/EmailVerify";
 
 import { NewPassword } from "./src/sceens/newPassword/NewPassword";
 import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
 import { Home } from "./src/sceens/home/Home";
 import { Profile } from "./src/sceens/profile/Profile";
-import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord";
-import { ProfileEdit } from "./src/sceens/profile/ProfileEdit";
-import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit";
+import { ProfileEdit } from "./src/sceens/profile/ProfileEdit"
+import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord"
+import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit"
+
 import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
 import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
-import CustomCalendar from "./src/components/calendars/Calendars";
-import { TelaCalendars } from "./src/sceens/TelaCalendars/TelaCalendars";
+import { TelaCalendars } from "./src/sceens/telaCalendars/TelaCalendars";
+import LocalConsulta from "./src/sceens/localConsulta/LocalConsulta";
 
 
 
@@ -55,7 +56,11 @@ export default function app() {
     <NavigationContainer>
 
       <Stack.Navigator>
-
+        <Stack.Screen
+          name="LocalConsulta"
+          component={LocalConsulta}
+          options={{ title: "LocalConsulta" }}
+        />
         <Stack.Screen
 
           //nome da tela 
@@ -67,6 +72,7 @@ export default function app() {
           //titulo da tela
           options={{ title: 'Navigation' }}
         />
+
         <Stack.Screen
           name="TelaCalendars"
           component={TelaCalendars}

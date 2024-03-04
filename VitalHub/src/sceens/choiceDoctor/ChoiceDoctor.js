@@ -35,7 +35,7 @@ export const ChoiceDoctor = ({navigation}) => {
                     <TextArea>Clínico, Pediatra</TextArea>
                 </DoctorCard>
 
-               <ButtonChoiceDoctor>
+               <ButtonChoiceDoctor onPress={() => navigation.navigate("TelaCalendars")}>
                <ButtonTittle>Continuar</ButtonTittle>
                </ButtonChoiceDoctor>
 
