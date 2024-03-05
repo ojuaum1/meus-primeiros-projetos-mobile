@@ -23,5 +23,6 @@ font-family: "MontserratAlternates_600SemiBold";
 text-decoration: underline;
 `
 export const TextMaps =styled(Text)`
+margin-top: -10px;
 
 `

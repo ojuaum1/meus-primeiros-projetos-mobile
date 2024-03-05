@@ -24,6 +24,8 @@ import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
 import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
 import { TelaCalendars } from "./src/sceens/telaCalendars/TelaCalendars";
 import LocalConsulta from "./src/sceens/localConsulta/LocalConsulta";
+import Presc from "./src/sceens/Presc/Presc";
+import { Main } from "./src/sceens/Main/Main";
 
 
 
@@ -55,13 +57,32 @@ export default function app() {
 
     <NavigationContainer>
 
+
       <Stack.Navigator>
+
+
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{ title: "Login" }}
+        />
+
+        <Stack.Screen
+          name="Main"
+          component={Main}
+        />
+
+        <Stack.Screen
+          name="Presc"
+          component={Presc}
+          options={{ title: "Presc" }}
+        />
         <Stack.Screen
           name="LocalConsulta"
           component={LocalConsulta}
           options={{ title: "LocalConsulta" }}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
 
           //nome da tela 
           name='Navigation'
@@ -71,7 +92,7 @@ export default function app() {
 
           //titulo da tela
           options={{ title: 'Navigation' }}
-        />
+        /> */}
 
         <Stack.Screen
           name="TelaCalendars"
@@ -88,11 +109,7 @@ export default function app() {
           component={Profile}
           options={{ title: "Perfil" }}
         />
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{ title: "Login" }}
-        />
+
 
         <Stack.Screen
           name="RecuperarSenha"

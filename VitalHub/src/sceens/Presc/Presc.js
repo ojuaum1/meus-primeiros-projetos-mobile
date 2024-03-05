@@ -4,20 +4,23 @@ import { ButtonTittle } from "../../components/buttonTitle/Style"
 import { Container } from "../../components/container/Style"
 import { InputPront, InputProntBig } from "../../components/input/Style"
 import { ContainerScroll } from "../../components/scrollView/ScrollView"
+import { Text } from "../../components/texts/Style"
 import { Age, Email, TextInputDesc, TextInputDiag, TextInputMed, Title } from "../../components/title/Style"
+import { ViewLocz } from "../localConsulta/Style"
+import { ImagemIcon, NotInput, NotInputBig } from "./Style"
 
-export const MedicalRecord = ({ navigation }) => {
+export const Presc = ({ navigation }) => {
     return (
         <Container>
 
-            <ProfileImagePront source={{ uri: "https://github.com/ojuaum1.png" }} />
+            <ProfileImagePront source={{ uri: "https://github.com/Carlos-Augusto-Roque.png" }} />
 
-            <Title> João Oliveira </Title>
+            <Title> Carlito </Title>
 
 
             <Informations>
-                <Age>19 anos</Age>
-                <Email>joao.oliveiira.pda@gmail.com</Email>
+                <Age>Cliníco geral</Age>
+                <Email>CRM-15286</Email>
             </Informations>
 
             <ContainerScroll>
@@ -25,7 +28,7 @@ export const MedicalRecord = ({ navigation }) => {
                     Descrição da consulta
                 </TextInputDesc>
 
-                <InputProntBig
+                <NotInputBig
                     placeholder='Descrição'
                 />
 
@@ -33,16 +36,32 @@ export const MedicalRecord = ({ navigation }) => {
                     Diagnóstico do paciente
                 </TextInputDiag>
 
-                <InputPront
+                <NotInput
                     placeholder="Diagnóstico"
                 />
 
                 <TextInputMed>
                     Prescrição médica
                 </TextInputMed>
-                <InputProntBig
+                <NotInputBig
                     placeholder="Prescrição médica"
                 />
+
+                <TextInputMed>
+                    Exames médicos
+                </TextInputMed>
+                <NotInputBig>
+                    <ViewLocz>
+                    <ImagemIcon  source={require('../../../assets/iconoir_file-not-found.png')}/>
+                        <Text>
+                            Nenhuma foto informada
+                        </Text>
+
+                    </ViewLocz>
+
+                </NotInputBig>
+
+
                 <Button onPress={() => navigation.navigate("MedicalRecordEdit")}>
                     <ButtonTittle>Salvar</ButtonTittle>
                 </Button>
@@ -60,4 +79,4 @@ export const MedicalRecord = ({ navigation }) => {
         </Container>
     )
 }
-export default MedicalRecord
+export default Presc
