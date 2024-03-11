@@ -4,8 +4,8 @@ import { Container } from "../../components/container/Style"
 
 import { HomeCalendar } from "../../components/homeCalendar/HomeCalendar"
 import { Header } from "../../components/header/Header"
-import { useEffect, useState } from "react"
-import { CreatePatientModal, FilterAppointament, IconButton } from "./style"
+import { useState } from "react"
+import { FilterAppointament, IconButton } from "./style"
 import { AbsListAppointament } from "../../components/absListAppointment/absListAppointment"
 
 import { ListComponent } from "../../components/list/List"
@@ -30,24 +30,21 @@ export const Home = ({ navigation }) => {
     const [showModalAppointment, setShowModalAppointment] = useState(false);
     const [showScheduleModal, setShowScheduleModal] = useState(false)
 
-    
+
     return (
         <Container>
 
             <StatusBar />
 
             {/* Header */}
-            <Header />
+            <Header navigation={navigation} />
 
             {/* Calendar */}
             <HomeCalendar />
 
             {/* Filtros (button) */}
 
-
-
-
-            <FilterAppointament>
+            <FilterAppointament >
 
                 <AbsListAppointament
                     textButton={"Agendadas"}
@@ -78,6 +75,7 @@ export const Home = ({ navigation }) => {
                 renderItem={({ item }) =>
                     statusLista == item.situacao && (
                         <AppointmentCard
+                            navigation={navigation}
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
@@ -94,6 +92,7 @@ export const Home = ({ navigation }) => {
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
                 navigation={navigation}
+                situacao={statusLista}
             />
 
             <ScheduleModal

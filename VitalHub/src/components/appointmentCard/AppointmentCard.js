@@ -13,6 +13,7 @@ import {
   TextBold,
   ViewRow,
 } from "./Style";
+import { useState } from "react";
 
 export const AppointmentCard = ({
   situacao = "pendente",
@@ -20,19 +21,22 @@ export const AppointmentCard = ({
   onPressAppointment,
   navigation
 }) => {
+
+
+  const [profile , setProfile] = useState ("Paciente")
   return (
     // container principal
-    <ContainerCardsList>
+    <ContainerCardsList onPress={onPressAppointment}>
       {/* imagem de perfil */}
       <ProfileImage source={{ uri: "https://github.com/ojuaum1.png" }} />
 
       {/* conteúdo ao lado da imagem de perfil */}
       <ContentCard>
         <DataProfileCard>
-          <ProfileName>João</ProfileName>
+          <ProfileName >João</ProfileName>
 
           <ProfileData>
-            <TextAge>45 anos</TextAge>
+            <TextAge>19 anos</TextAge>
             <TextBold>Rotina</TextBold>
           </ProfileData>
         </DataProfileCard>
@@ -61,7 +65,7 @@ export const AppointmentCard = ({
                         <ButtonText situacao={situacao}>Cancelar</ButtonText>
                     </ButtonCard>
                 ) : (
-                    <ButtonCard onPress={onPressAppointment}>
+                    <ButtonCard onPress={profile == "Paciente" ? () => {navigation.replace("ViewPrescription")}: onPressAppointment}>
                         <ButtonText situacao={situacao}>Ver Prontuário</ButtonText>
                     </ButtonCard>
                 )

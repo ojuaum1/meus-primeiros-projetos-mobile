@@ -25,3 +25,8 @@ export const ContainerHeader = styled(LinearGradient).attrs({
     box-shadow: 0px 4px 15px #00000014;
   `;
 
+export const ContainerViewPrescription = styled.SafeAreaView`
+align-items: center;
+width: 100%;
+height: 100%;
+`

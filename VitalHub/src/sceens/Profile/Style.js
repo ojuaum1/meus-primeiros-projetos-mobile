@@ -36,7 +36,7 @@ export const TextsProfile = styled.Text`
 font-family: "Quicksand_600SemiBold";
 margin-left: 20px;
 margin-top: 15px;
-margin-bottom: 5px;
+margin-bottom: 7px;
 `
 export const InputCep = styled.View`
 margin-right: 20px;

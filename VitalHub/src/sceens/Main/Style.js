@@ -1,17 +1,19 @@
-import styled from 'styled-components/native'
+import styled from "styled-components";
 
 export const ContentIcon = styled.View`
-flex-direction: row;
-justify-content: center;
-align-items: center;
-gap: 5px;
+
 border-radius: 18px;
 padding: 9px 12px;
 
-background-color:${props => `${props.tabBarActiveBackgroudColor}`} ;
+background-color: ${props => `${props.tabBarActiveBackgroundColor}`};
+
+gap: 5px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
 `
 
-export const TextIcon= styled.Text`
+export const TextIcon = styled.Text`
 font-size: 14px;
-font-family: ;
+font-family: "Quicksand_500Medium";
 `

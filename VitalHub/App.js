@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet } from "react-native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from "@react-navigation/native";
-import { Navigation } from "./src/sceens/navigation/Navigation";
+
 
 const Stack = createNativeStackNavigator()
 
@@ -16,16 +16,16 @@ import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
 import { Home } from "./src/sceens/home/Home";
 import { Profile } from "./src/sceens/profile/Profile";
-import { ProfileEdit } from "./src/sceens/profile/ProfileEdit"
-import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord"
-import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit"
+import { MedicalRecord } from "./src/sceens/medicalRecord/MedicalRecord"
+import { MedicalRecordEdit } from "./src/sceens/medicalRecord/MedicalRecordEdit"
 
 import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
 import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
 import { TelaCalendars } from "./src/sceens/telaCalendars/TelaCalendars";
-import LocalConsulta from "./src/sceens/localConsulta/LocalConsulta";
-import Presc from "./src/sceens/Presc/Presc";
-import { Main } from "./src/sceens/Main/Main";
+import { Maps } from "./src/sceens/maps/Maps";
+import { Prescription } from "./src/sceens/prescription/Prescription";
+import { Main } from "./src/sceens/main/Main";
+import { ViewPrescription } from "./src/sceens/viewPrescription/ViewPrescription";
 
 
 
@@ -38,7 +38,7 @@ export default function app() {
     MontserratAlternates_700Bold,
     Quicksand_500Medium,
     Quicksand_700Bold,
-    Quicksand_600SemiBold
+    Quicksand_600SemiBold,
 
   });
 
@@ -57,14 +57,15 @@ export default function app() {
 
     <NavigationContainer>
 
+      <Stack.Navigator
 
-      <Stack.Navigator>
+        screenOptions={{ headerShown: false }}
 
+      >
 
         <Stack.Screen
           name="Login"
           component={Login}
-          options={{ title: "Login" }}
         />
 
         <Stack.Screen
@@ -72,16 +73,7 @@ export default function app() {
           component={Main}
         />
 
-        <Stack.Screen
-          name="Presc"
-          component={Presc}
-          options={{ title: "Presc" }}
-        />
-        <Stack.Screen
-          name="LocalConsulta"
-          component={LocalConsulta}
-          options={{ title: "LocalConsulta" }}
-        />
+
         {/* <Stack.Screen
 
           //nome da tela 
@@ -94,75 +86,85 @@ export default function app() {
           options={{ title: 'Navigation' }}
         /> */}
 
+
         <Stack.Screen
           name="TelaCalendars"
           component={TelaCalendars}
-          options={{ title: "TelaCalendars" }}
+
         />
-        <Stack.Screen
-          name="ProfileEdit"
-          component={ProfileEdit}
-          options={{ title: "Profile Edit" }}
-        />
+
         <Stack.Screen
           name="Profile"
           component={Profile}
-          options={{ title: "Perfil" }}
+
         />
 
 
         <Stack.Screen
-          name="RecuperarSenha"
+          name="Password"
           component={Password}
-          options={{ title: "Recuperar Senha" }}
+
         />
 
         <Stack.Screen
           name="Verify"
           component={Verify}
-          options={{ title: "Verificar Email" }}
+
         />
 
         <Stack.Screen
           name="NewPassword"
           component={NewPassword}
-          options={{ title: "Redefinir senha" }}
+
         />
 
         <Stack.Screen
           name="NewAccount"
           component={NewAccount}
-          options={{ title: "Criar conta" }}
         />
 
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{ title: "Home" }}
         />
 
         <Stack.Screen
           name="MedicalRecord"
           component={MedicalRecord}
-          options={{ title: "MedicalRecord" }}
         />
 
         <Stack.Screen
           name="MedicalRecordEdit"
           component={MedicalRecordEdit}
-          options={{ title: "MedicalRecordEdit" }}
         />
+
         <Stack.Screen
           name="ChoiceClinic"
           component={ChoiceClinic}
-          options={{ title: "ChoiceClinic" }}
         />
 
         <Stack.Screen
           name="ChoiceDoctor"
           component={ChoiceDoctor}
-          options={{ title: "ChoiceDoctor" }}
         />
+
+
+        <Stack.Screen
+          name="Maps"
+          component={Maps}
+        />
+
+        <Stack.Screen
+          name="Prescription"
+          component={Prescription}
+        />
+
+
+        <Stack.Screen
+          name="ViewPrescription"
+          component={ViewPrescription}
+        />
+
 
       </Stack.Navigator>
 
