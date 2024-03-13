@@ -2,7 +2,7 @@ import { Informations, ProfileImagePront } from "../../components/appointmentMod
 import { Button, ButtonCancell, ButtonPrescription, ButtonPrescriptionTittle, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
 import { Container } from "../../components/container/Style"
 import { InputProntBigEdit, InputProntEdit } from "../../components/input/Style"
-import { ContainerScroll } from "../../components/scrollView/ScrollView"
+import { ContainerScroll } from "../../components/ScrollView/ScrollView"
 import { TextsPrescription } from "../../components/texts/Style"
 import { Age, Email, TextInputDesc, TextInputDiag, TextInputMed, Title } from "../../components/title/Style"
 import { IconPrescption, PrescriptionsInformations, ViewPresc, ViewPrescrption } from "./Style"

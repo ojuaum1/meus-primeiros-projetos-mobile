@@ -3,7 +3,7 @@ import { Informations, ProfileImagePront } from "../../components/appointmentMod
 import { ButtonAdd, ButtonCancell, ButtonCancellExams, ButtonSecondaryTitle, TittleCancellExams } from "../../components/button/Style"
 import { Container, ContainerViewPrescription } from "../../components/container/Style"
 import { InputProfile, InputPront, InputProntBig } from "../../components/input/Style"
-import { ContainerScroll, ContainerScrollProfile, ScrollViewPrescription } from "../../components/scrollView/ScrollView"
+import { ContainerScroll, ContainerScrollProfile, ScrollViewPrescription } from "../../components/ScrollView/ScrollView"
 import { Age, Email, TextInputDesc, TextInputDiag, TextInputInsertImage, TextInputMed, Title } from "../../components/title/Style"
 import { ImageExams, ImportImages, SendImage, ViewButtons } from "./Style"
 

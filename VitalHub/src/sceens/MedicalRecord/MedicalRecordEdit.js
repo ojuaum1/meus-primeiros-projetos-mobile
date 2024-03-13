@@ -1,4 +1,4 @@
-import { ContainerScroll } from "../../components/scrollView/ScrollView"
+import { ContainerScroll } from "../../components/ScrollView/ScrollView"
 import { Informations, ProfileImagePront } from "../../components/appointmentModal/Style"
 import { Button, ButtonCancell, ButtonEdit, ButtonEditMedRec, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
 import { Container } from "../../components/container/Style"

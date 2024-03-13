@@ -16,8 +16,8 @@ import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
 import { Home } from "./src/sceens/home/Home";
 import { Profile } from "./src/sceens/profile/Profile";
-import { MedicalRecord } from "./src/sceens/medicalRecord/MedicalRecord"
-import { MedicalRecordEdit } from "./src/sceens/medicalRecord/MedicalRecordEdit"
+import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord"
+import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit"
 
 import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
 import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
@@ -81,12 +81,16 @@ export default function app() {
 
           //componente que será chamado
           component={Navigation}
-
+          
           //titulo da tela
           options={{ title: 'Navigation' }}
         /> */}
 
 
+        <Stack.Screen
+          name="Maps"
+          component={Maps}
+        />
         <Stack.Screen
           name="TelaCalendars"
           component={TelaCalendars}
@@ -149,10 +153,6 @@ export default function app() {
         />
 
 
-        <Stack.Screen
-          name="Maps"
-          component={Maps}
-        />
 
         <Stack.Screen
           name="Prescription"

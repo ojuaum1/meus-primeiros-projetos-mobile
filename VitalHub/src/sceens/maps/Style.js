@@ -6,6 +6,10 @@ flex-direction: row;
 margin-left:px;
 gap: -100px;
 `
+export const ViewMap = styled.View`
+width: 100%;
+height: 324px;
+`
 export const InputMaps = styled(InputProntEdit)`
 `
 export const InputMapsMini = styled(InputMaps)`

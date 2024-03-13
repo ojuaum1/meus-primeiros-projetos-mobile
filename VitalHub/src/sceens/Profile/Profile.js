@@ -1,5 +1,5 @@
 
-import { ContainerScrollProfile } from "../../components/scrollView/ScrollView"
+import { ContainerScrollProfile } from "../../components/ScrollView/ScrollView"
 import { ButtonTextProfile } from "../../components/appointmentCard/Style"
 import { ButtonEditMedRec, ButtonExit, ButtonProfile, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
 import { InputAddress, InputProfile } from "../../components/input/Style"
