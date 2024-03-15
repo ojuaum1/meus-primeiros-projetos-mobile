@@ -61,7 +61,7 @@ export const Prescription = () => {
                 </PrescriptionsInformations>
 
                 <ButtonPrescription>
-                    <ButtonPrescriptionTittle>Enviar</ButtonPrescriptionTittle>
+                    <ButtonPrescriptionTittle onPress={() => navigation.navigate("")}>Enviar</ButtonPrescriptionTittle>
                 </ButtonPrescription>
 
 

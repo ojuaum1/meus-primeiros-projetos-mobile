@@ -26,6 +26,7 @@ import { Maps } from "./src/sceens/maps/Maps";
 import { Prescription } from "./src/sceens/prescription/Prescription";
 import { Main } from "./src/sceens/main/Main";
 import { ViewPrescription } from "./src/sceens/viewPrescription/ViewPrescription";
+import { Camera, Camerinha } from "./src/sceens/camera/Camera";
 
 
 
@@ -163,6 +164,10 @@ export default function app() {
         <Stack.Screen
           name="ViewPrescription"
           component={ViewPrescription}
+        />
+        <Stack.Screen
+          name="Camerinha"
+          component={Camerinha}
         />
 
 
