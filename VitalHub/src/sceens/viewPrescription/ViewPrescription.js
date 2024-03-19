@@ -8,7 +8,6 @@ import { Age, Email, TextInputDesc, TextInputDiag, TextInputMed, Title } from '.
 import { ImageExams, ImportImages, SendImage, ViewButtons } from './Style';
 
 export const ViewPrescription = ({ route, navigation }) => {
-    const { photoUri } = route.params;
 
     return (
         <ContainerViewPrescription>
@@ -28,9 +27,6 @@ export const ViewPrescription = ({ route, navigation }) => {
                 <InputProntBig placeholder="Prescrição médica" />
                 
                 <TextInputMed>Exames Médicos</TextInputMed>
-                <ImportImages>
-                    {photoUri ? <ImageExams source={{ uri: photoUri }} /> : <ImageExams source={require("../../../assets/InsertExams.png")} />}
-                </ImportImages>
                 
                 <ViewButtons>
                     <ButtonAdd onPress={() => navigation.navigate("Camerinha")}>
